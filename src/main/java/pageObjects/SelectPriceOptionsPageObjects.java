@@ -8,7 +8,6 @@ import testBase.TestBase;
 
 public class SelectPriceOptionsPageObjects extends TestBase {
     public class SelectPriceOptionsPageObjects extends TestBase{
-
         @FindBy(id="nextsendquote")
         WebElement btn_Next;
 
@@ -17,14 +16,14 @@ public class SelectPriceOptionsPageObjects extends TestBase {
             PageFactory.initElements(driver, this);
         }
 
-        //to get price based on selected option / plan
+        //Get price based on selected option / plan
         public String getPriceForSelectedOption(String plan) {
-            String dataXpath = "//table[@id='priceTable']//tr[1]//td[@data-label='"+plan+"']/span";
+            String dataXpath = "//table[@id='priceTable']//tr[1]//td[@data-label='" + plan + "']/span";
             return driver.findElement(By.xpath(dataXpath)).getText();
         }
 
         public void selectPriceOption(String plan) {
-            String dataXpath = "//input[@name='Select Option' and @value='"+plan+"']/parent::label";
+            String dataXpath = "//input[@name='Select Option' and @value='" + plan + "']/parent::label";
             driver.findElement(By.xpath(dataXpath)).click();
         }
 
