@@ -9,8 +9,6 @@ import testBase.TestBase;
 
 import java.util.HashMap;
 
-import static testBase.ObjectsRepo.ObjectsRepo.*;
-
 public class EndToEndTests_motorcycle extends TestBase {
     ExcelOperations excel = new ExcelOperations("InsurancePremium");
 

@@ -1,15 +1,21 @@
 package testBase;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pageObjects.*;
-import reusableComponents.PropertiesOperations;
 
-import static testBase.ObjectsRepo.ObjectsRepo.driver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import pageObjects.EnterInsuranceDataPageObjects;
+import pageObjects.EnterProductDataPageObjects;
+import pageObjects.EnterVehicleDataPageObjects;
+import pageObjects.HomePageObjects;
+import pageObjects.SelectPriceOptionsPageObjects;
+import reusableComponents.PropertiesOperations;
 
 public class TestBase extends ObjectsRepo {
     public void launchBrowserAndNavigate() throws Exception {
@@ -28,7 +34,8 @@ public class TestBase extends ObjectsRepo {
             driver = new InternetExplorerDriver();
         }
 
-        @BeforeMethod   /// it will get execute before each test method within current class
+        ///It will get executed before each test method within current class
+        @BeforeMethod
         public void setupMethod() throws Exception {
             launchBrowserAndNavigate();
             homepage = new HomePageObjects();

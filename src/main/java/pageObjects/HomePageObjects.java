@@ -5,8 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import testBase.TestBase;
 
-import static testBase.ObjectsRepo.ObjectsRepo.driver;
-
 public class HomePageObjects extends TestBase {
     //Only page objects + respective methods
     @FindBy(id="nav_automobile")

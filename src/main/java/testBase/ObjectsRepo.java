@@ -5,8 +5,6 @@ import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.WebDriver;
 import pageObjects.*;
 import reusableComponents.CommonMethods;
-
-public class ObjectsRepo {
     public class ObjectsRepo {
         //Initialize main objects
         public static WebDriver driver;
@@ -22,4 +20,4 @@ public class ObjectsRepo {
 
         public CommonMethods cm = new CommonMethods();
     }
-}
+

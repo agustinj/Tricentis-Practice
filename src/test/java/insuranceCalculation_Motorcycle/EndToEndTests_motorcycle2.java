@@ -8,8 +8,6 @@ import testBase.TestBase;
 
 import java.util.HashMap;
 
-import static testBase.ObjectsRepo.ObjectsRepo.*;
-
 public class EndToEndTests_motorcycle2 extends TestBase {
     ExcelOperations excel = new ExcelOperations("InsurancePremium");
 
@@ -21,7 +19,7 @@ public class EndToEndTests_motorcycle2 extends TestBase {
         homepage.clickOnMotorCycleLink();
         vehData.enterVehicleData(testData);
         vehData.clickOnNextButton();
-        insData.enterInsurantData(testData);
+        insData.enterInsuranceData(testData);
         insData.clickOnNextButton();
         prodData.enterProductData(testData);
         prodData.clickOnNextButton();
@@ -44,7 +42,7 @@ public class EndToEndTests_motorcycle2 extends TestBase {
         homepage.clickOnMotorCycleLink();
         vehData.enterVehicleData(testData);
         vehData.clickOnNextButton();
-        insData.enterInsurantData(testData);
+        insData.enterInsuranceData(testData);
         insData.clickOnNextButton();
         prodData.enterProductData(testData);
         prodData.clickOnNextButton();

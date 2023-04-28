@@ -14,8 +14,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static testBase.ObjectsRepo.ObjectsRepo.*;
-
 public class ListenersImplementation extends ObjectsRepo implements ITestListener {
     public void onTestStart(ITestResult result) {
         //before each test case

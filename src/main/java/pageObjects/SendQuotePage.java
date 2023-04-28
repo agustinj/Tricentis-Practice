@@ -5,8 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import testBase.TestBase;
 
-import static testBase.ObjectsRepo.ObjectsRepo.driver;
-
 public class SendQuotePage extends TestBase {
     @FindBy(id="email")
     WebElement txt_email;
@@ -29,7 +27,7 @@ public class SendQuotePage extends TestBase {
     @FindBy(id="sendemail")
     WebElement btn_send;
 
-    public SendQuotPage() {
+    public SendQuotePage() {
         PageFactory.initElements(driver, this);
     }
 

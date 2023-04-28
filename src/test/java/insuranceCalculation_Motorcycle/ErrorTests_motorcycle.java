@@ -8,9 +8,6 @@ import testBase.TestBase;
 import java.util.Arrays;
 import java.util.List;
 
-import static testBase.ObjectsRepo.ObjectsRepo.homepage;
-import static testBase.ObjectsRepo.ObjectsRepo.vehData;
-
 public class ErrorTests_motorcycle extends TestBase {
     @Test(enabled = false)
     public void errorMessage_PayLoadField() {

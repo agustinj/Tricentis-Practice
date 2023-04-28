@@ -8,8 +8,6 @@ import testBase.TestBase;
 import java.util.HashMap;
 import java.util.List;
 
-import static testBase.ObjectsRepo.ObjectsRepo.driver;
-
 public class EnterVehicleDataPageObjects extends TestBase {
     public class EnterVehicalDataPageObjects extends TestBase {
 

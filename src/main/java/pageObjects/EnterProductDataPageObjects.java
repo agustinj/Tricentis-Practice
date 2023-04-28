@@ -2,14 +2,12 @@ package pageObjects;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import testBase.TestBase;
 
 import java.util.HashMap;
 import java.util.List;
 
 import static org.openqa.selenium.support.PageFactory.*;
-import static testBase.ObjectsRepo.ObjectsRepo.driver;
 
 public class EnterProductDataPageObjects extends TestBase {
     @FindBy(id="startdate")
