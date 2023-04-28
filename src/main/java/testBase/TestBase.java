@@ -6,9 +6,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pageObjects.EnterProductDataPageObjects;
-import pageObjects.HomePageObjects;
-import pageObjects.SelectPriceOptionsPageObjects;
+import pageObjects.*;
+import reusableComponents.PropertiesOperations;
+
+import static testBase.ObjectsRepo.ObjectsRepo.driver;
 
 public class TestBase extends ObjectsRepo {
     public void launchBrowserAndNavigate() throws Exception {
@@ -29,10 +30,10 @@ public class TestBase extends ObjectsRepo {
 
         @BeforeMethod   /// it will get execute before each test method within current class
         public void setupMethod() throws Exception {
-            LaunchBrowserAndNavigate();
+            launchBrowserAndNavigate();
             homepage = new HomePageObjects();
-            vehData = new EnterVehicalDataPageObjects();
-            insData = new EnterInsurantDataPageObjects();
+            vehData = new EnterVehicleDataPageObjects();
+            insData = new EnterInsuranceDataPageObjects();
             prodData = new EnterProductDataPageObjects();
             priceOptions = new SelectPriceOptionsPageObjects();
         }
