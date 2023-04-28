@@ -21,12 +21,12 @@ public class HomePageObjects extends TestBase {
     @FindBy(id="nav_motorcycle")
     WebElement link_motorcycle;
 
-    //constructor - to use initElement method
+    //Constructor - to use initElement method
     public HomePageObjects() {
         PageFactory.initElements(driver, this);
     }
 
-    //for click on motorcycle link on homepage
+    //To click on motorcycle link on homepage
     public void clickOnMotorCycleLink() {
         System.out.println(driver);
         link_motorcycle.click();
