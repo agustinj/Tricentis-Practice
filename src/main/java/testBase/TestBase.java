@@ -1,5 +1,7 @@
 package testBase;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -14,13 +16,16 @@ import pageObjects.HomePageObjects;
 import pageObjects.SelectPriceOptionsPageObjects;
 import reusableComponents.PropertiesOperations;
 
-public class TestBase extends ObjectsRepo {
-    public void launchBrowserAndNavigate() throws Exception {
+public class TestBase extends ObjectsRepo{
+
+
+
+    public void LaunchBrowserAndNavigate() throws Exception {
         //read prop file and get browser and url
         String browser = PropertiesOperations.getPropertyValueByKey("browser");
         String url = PropertiesOperations.getPropertyValueByKey("url");
 
-        if (browser.equalsIgnoreCase("chrome")) {
+        if(browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
         } else if(browser.equalsIgnoreCase("firefox")) {
@@ -31,21 +36,24 @@ public class TestBase extends ObjectsRepo {
             driver = new InternetExplorerDriver();
         }
 
-        ///It will get executed before each test method within current class
-        @BeforeMethod
-        public void setupMethod() throws Exception {
-            launchBrowserAndNavigate();
-            homepage = new HomePageObjects();
-            vehData = new EnterVehicleDataPageObjects();
-            insData = new EnterInsuranceDataPageObjects();
-            prodData = new EnterProductDataPageObjects();
-            priceOptions = new SelectPriceOptionsPageObjects();
-        }
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
 
-        @AfterMethod
-        public void cleanUp() {
-            driver.quit();
-        }
+        driver.get(url);
+    }
 
+    @BeforeMethod   /// it will get execute before each test method within current class
+    public void setupMethod() throws Exception {
+        LaunchBrowserAndNavigate();
+        homepage = new HomePageObjects();
+        vehData = new EnterVehicleDataPageObjects();
+        insData = new EnterInsuranceDataPageObjects();
+        prodData = new  EnterProductDataPageObjects();
+        priceOptions = new SelectPriceOptionsPageObjects();
+    }
+
+    @AfterMethod
+    public void cleanUp() {
+        driver.quit();
     }
 }
