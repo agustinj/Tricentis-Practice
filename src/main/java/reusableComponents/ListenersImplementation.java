@@ -43,11 +43,7 @@ public class ListenersImplementation extends ObjectsRepo implements ITestListene
         } catch (IOException e) {
             e.printStackTrace();
         }
-        try {
-            test.addScreenCaptureFromPath(screenshotPath, "Test case failure screenshot");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        test.addScreenCaptureFromPath(screenshotPath, "Test case failure screenshot");
     }
 
     public void onTestSkipped(ITestResult result) {

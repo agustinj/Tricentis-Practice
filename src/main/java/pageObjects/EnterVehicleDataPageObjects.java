@@ -8,8 +8,7 @@ import testBase.TestBase;
 import java.util.HashMap;
 import java.util.List;
 
-public class EnterVehicleDataPageObjects extends TestBase {
-    public class EnterVehicalDataPageObjects extends TestBase {
+    public class EnterVehicleDataPageObjects extends TestBase {
 
         @FindBy(id="make")
         WebElement dd_make;
@@ -42,7 +41,7 @@ public class EnterVehicleDataPageObjects extends TestBase {
         WebElement btn_Next;
 
         ///init
-        public EnterVehicalDataPageObjects() {
+        public EnterVehicleDataPageObjects() {
             PageFactory.initElements(driver, this);
         }
 

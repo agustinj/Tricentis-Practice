@@ -16,7 +16,7 @@ public class EndToEndTests_motorcycle extends TestBase {
     public void insuranceCalculate(Object obj1) throws Exception {
         HashMap<String, String> testData = (HashMap<String, String>) obj1;
 
-        test.log(Status.INFO, "Test data used for execution is: "+ testData);
+        test.log(Status.INFO, "Test data used for execution is: " + testData);
         homepage.clickOnMotorCycleLink();
         vehData.enterVehicleData(testData);
         vehData.clickOnNextButton();
