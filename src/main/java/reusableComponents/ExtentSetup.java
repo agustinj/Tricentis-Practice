@@ -8,8 +8,6 @@ import testBase.ObjectsRepo;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static testBase.ObjectsRepo.ObjectsRepo.extent;
-
 public class ExtentSetup extends ObjectsRepo {
     public static ExtentReports setupExtentReport() {
         SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyy HH-mm-ss");
